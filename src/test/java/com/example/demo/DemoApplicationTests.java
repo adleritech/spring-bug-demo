@@ -14,13 +14,13 @@ import static org.assertj.core.api.Assertions.assertThat;
 @SpringBootTest
 public class DemoApplicationTests {
 
-	@Autowired
-	private DemoRepository demoRepository;
+    @Autowired
+    private DemoRepository demoRepository;
 
-	@Test
-	public void repositoryShouldWork() {
+    @Test
+    public void repositoryShouldWork() {
 
-		demoRepository.save(new Item());
+        demoRepository.save(new Item());
 
         List<Item> all = demoRepository.findAll();
         assertThat(all.get(0).getCreatedAt()).isNotNull();
